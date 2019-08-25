@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">This is my todo list</header>
+    <div class="container">
+        <aside class="aside" id="aside">
+            <div class="navbar-nav" id="navbar-nav">
+                <nav class="navbar" id="navbar">
+                    <ul class="nav-items" id="nav-items">
+                        <li class="item" id="todo" onclick="changeTab(this.id)">Todo</li>
+                        <li class="item" id="user" onclick="changeTab(this.id)">User</li>
+                        <li class="item" id="dept" onclick="changeTab(this.id)">Department</li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <section class="section" id="section">
+            <div class="main-body" id="todo-content">
+                <div class="search-box" id="search-box">
+                    <form action="" class="search" id="search">
+                        <input type="text" name="" id="search-input" onfocus="showSuggestion(this.value)" onkeyup="showSuggestion(this.value)" onkeydown="showSuggestion(this.value)" onblur="hideSuggestion('auto-populate')" class="search-input">
+                        <input type="button" value="add" class="search-input add-item" id="add" onclick="addElement()">
+                        <div class="auto-populate" id="auto-populate">
+                            <ul class="populate-items" id="populate-items">
+
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Title</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todo-items">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="main-body" id="user-content">
+                This is user page
+            </div>
+            <div class="main-body" id="dept-content">
+                This is Department page
+            </div>
+        </section>
+    </div>
+    <footer class="footer">@Copyright Rahul Kaushik</footer>
+    <script src="js/json.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
